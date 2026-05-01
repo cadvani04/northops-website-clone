@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 540" role="img" aria-label="NorthOps client partners">
+  <rect width="760" height="540" rx="24" fill="#2A2A2A"/>
+  <text x="380" y="56" fill="#FFFFFF" font-family="ui-sans-serif, system-ui, sans-serif" font-size="28" font-weight="600" text-anchor="middle">Trusted operators</text>
+  <text x="380" y="92" fill="#FFFFFF" opacity="0.55" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15" text-anchor="middle">Restaurants " retail " ops-heavy teams</text>
+  <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="600" fill="#1A1A1A">
+    <rect x="48" y="130" width="200" height="56" rx="12" fill="#F4F4EE"/><text x="148" y="164" text-anchor="middle">Total Fire Protection</text>
+    <rect x="280" y="130" width="200" height="56" rx="12" fill="#F4F4EE"/><text x="380" y="164" text-anchor="middle">Namaste Cuisine SF</text>
+    <rect x="512" y="130" width="200" height="56" rx="12" fill="#F4F4EE"/><text x="612" y="164" text-anchor="middle">La Estancia</text>
+    <rect x="48" y="218" width="200" height="56" rx="12" fill="#F4F4EE"/><text x="148" y="252" text-anchor="middle">The Chaga Co.</text>
+    <rect x="280" y="218" width="200" height="56" rx="12" fill="#F4F4EE"/><text x="380" y="252" text-anchor="middle">OpenLA</text>
+    <rect x="512" y="218" width="200" height="56" rx="12" fill="#F4F4EE"/><text x="612" y="252" text-anchor="middle">Bullvinos</text>
+    <rect x="164" y="306" width="200" height="56" rx="12" fill="#F4F4EE"/><text x="264" y="340" text-anchor="middle">Chocolat</text>
+    <rect x="396" y="306" width="200" height="56" rx="12" fill="#F4F4EE"/><text x="496" y="340" text-anchor="middle">Onyx Lifestyle Club</text>
+    <rect x="258" y="394" width="420" height="56" rx="12" fill="#D4FF00"/><text x="468" y="428" text-anchor="middle" fill="#1A1A1A">El Palomar + Cilantros</text>
+  </g>
+</svg>

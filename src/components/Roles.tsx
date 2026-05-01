@@ -1,8 +1,14 @@
 "use client";
 import { ArrowRight } from "lucide-react";
 const roles = [
-  { title: "Senior Product Designer", link: "mailto:audrey@mapo.studio" },
-  { title: "Senior Product Manager", link: "mailto:audrey@mapo.studio" },
+  {
+    title: "Growth Systems Specialist",
+    link: "mailto:hello@northops.io",
+  },
+  {
+    title: "Automation & CRM Engineer",
+    link: "mailto:hello@northops.io",
+  },
 ];
 export default function Roles() {
   return (
@@ -12,9 +18,9 @@ export default function Roles() {
           Roles
         </span>
         <h2 className="text-4xl md:text-5xl font-medium mb-16">
-          We're always hiring
+          We periodically bring on specialists
           <br />
-          great people
+          who ship measurable outcomes
         </h2>
         <div className="space-y-0">
           {roles.map((role) => (

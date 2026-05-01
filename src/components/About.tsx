@@ -8,18 +8,25 @@ export default function About() {
           About
         </span>
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight mb-6">
-          <span className="text-charcoal/40">Product managers & designers</span>{" "}
-          <span className="text-charcoal">for AI x B2B teams.</span>
+          <span className="text-charcoal/40">NorthOps replaces scattered tools</span>{" "}
+          <span className="text-charcoal">
+            with systems that save time and create customers.
+          </span>
         </h2>
         <p className="text-lg text-charcoal/70 mb-12 max-w-2xl">
-          Senior product talent that drives design projects from wireframe to full release alongside your engineers.
+          NorthOps helps businesses replace scattered tools, inconsistent
+          marketing, and manual operations with connected systems that create
+          customers and save time. We combine growth, automation, and software
+          execution so businesses can move faster without hiring a huge team.
         </p>
         <div className="border-t border-charcoal/10 pt-8 mb-8">
           <div className="flex items-start gap-3 mb-2">
             <ArrowRight className="w-5 h-5 text-charcoal/40 mt-1" />
             <div>
-              <p className="text-5xl md:text-6xl font-medium text-charcoal">0</p>
-              <p className="text-charcoal/60 mt-1">happy teams across the globe</p>
+              <p className="text-5xl md:text-6xl font-medium text-charcoal">
+                1M+
+              </p>
+              <p className="text-charcoal/60 mt-1">organic views generated</p>
             </div>
           </div>
         </div>
@@ -27,8 +34,12 @@ export default function About() {
           <div className="flex items-start gap-3 mb-2">
             <ArrowRight className="w-5 h-5 text-charcoal/40 mt-1" />
             <div>
-              <p className="text-5xl md:text-6xl font-medium text-charcoal">$0M+</p>
-              <p className="text-charcoal/60 mt-1">raised by our customers</p>
+              <p className="text-5xl md:text-6xl font-medium text-charcoal">
+                $30K+
+              </p>
+              <p className="text-charcoal/60 mt-1">
+                sales generated using our own systems
+              </p>
             </div>
           </div>
         </div>
@@ -39,7 +50,7 @@ export default function About() {
           <span className="w-8 h-8 bg-lime-dark/20 rounded-full flex items-center justify-center">
             <Sparkles className="w-4 h-4" />
           </span>
-          Book call
+          Book a Strategy Call
         </a>
       </div>
     </section>

@@ -1,67 +1,56 @@
 "use client";
+
+import { clientLogosNorthOps } from "@/data/client-logos";
+import Image from "next/image";
+
 const teamMembers = [
   {
-    name: "Audrey T.",
-    role: "FOUNDER",
-    location: "SYDNEY",
-    bio: "Sometimes a PM but always a PD. Drinks 3 matchas a day.",
-    image: "https://ext.same-assets.com/2268013425/4199088296.jpeg",
+    name: "Curran Advani",
+    role: "SOCIAL MEDIA & VIRAL GROWTH",
+    location: "CONTENT",
+    bio: "Leads social and short-form storytelling that earns attention—and routes it toward real demand.",
+    image: "/team/curran-advani.png",
+    prev: "TikTok • Instagram • influencer-style reels",
+  },
+  {
+    name: "Kayden Sterns",
+    role: "AI SYSTEMS DEVELOPER",
+    location: "KUMON",
+    bio: "Ships internal AI systems at Kumon—turning learning-center operations and tooling into reliable software.",
+    image: "/team/kayden-sterns.png",
     prev: null,
   },
   {
-    name: "Jenny Chu",
-    role: "PRODUCT",
-    location: "SYDNEY",
-    bio: null,
-    image: "https://ext.same-assets.com/2268013425/2843043482.jpeg",
-    prev: "Canva, Atlassian, Eucalyptus",
+    name: "Chaavan Sure",
+    role: "AI CONSULTANT",
+    location: "$100M+ ARR",
+    bio: "Advises executives at nine-figure operators on where AI compounds revenue, cuts cost, and stays governable—without science projects.",
+    image: "/team/chaavan-sure.png",
+    prev: null,
   },
   {
-    name: "Man Hin Ma",
-    role: "DESIGN",
-    location: "SYDNEY",
-    bio: null,
-    image: "https://ext.same-assets.com/2268013425/2970004300.png",
-    prev: "Eucalyptus, Zip",
+    name: "Ashley",
+    role: "MOBILE DEVELOPMENT INTERN",
+    location: "GOOGLE",
+    bio: "Supporting Google’s consumer mobile surfaces—shipping quality features with the discipline of a big-tech release train.",
+    image: "/team/ashley.png",
+    prev: null,
   },
   {
-    name: "Quinnie Chen",
-    role: "PRODUCT",
-    location: "MELBOURNE",
-    bio: null,
-    image: "https://ext.same-assets.com/2268013425/2110445206.jpeg",
-    prev: "Canva, Envato",
-  },
-  {
-    name: "George Hatzis",
-    role: "DESIGN",
-    location: "MELBOURNE",
-    bio: null,
-    image: "https://ext.same-assets.com/2268013425/3977456799.png",
-    prev: "Wisr, Eucalyptus",
-  },
-  {
-    name: "Serena Thai",
-    role: "DESIGN",
-    location: "SYDNEY",
-    bio: null,
-    image: "https://ext.same-assets.com/2268013425/2286026670.png",
-    prev: "Safety Culture",
-  },
-  {
-    name: "Clement Tan",
-    role: "DESIGN",
-    location: "SYDNEY",
-    bio: null,
-    image: "https://ext.same-assets.com/2268013425/224360404.jpeg",
-    prev: "Quickli",
+    name: "Sid Mamidanna",
+    role: "AI RESEARCH & SAFETY EXPERT",
+    location: "CAMBRIDGE (PHD)",
+    bio: "Guards how we design agents, evals, and automation—bringing research-grade discipline to shipped systems. Heading to Cambridge for his PhD.",
+    image: "/team/sid-mamidanna.png",
+    prev: null,
   },
 ];
-const companyLogos = [
-  "https://ext.same-assets.com/2268013425/1035612841.png",
-  "https://ext.same-assets.com/2268013425/2037737850.png",
-  "https://ext.same-assets.com/2268013425/3466712259.png",
-];
+const companyStripLogos = clientLogosNorthOps.slice(0, 3).map((c) => ({
+  icon: c.icon,
+  alt: `${c.name} logo`,
+}));
+const headshotBaseline = new Set(["Curran Advani", "Chaavan Sure"]);
+
 export default function Team() {
   return (
     <section id="team" className="py-24 px-6 bg-cream">
@@ -70,23 +59,37 @@ export default function Team() {
           Team
         </span>
         <h2 className="text-4xl md:text-5xl font-medium mb-4">
-          Executed by a team
+          Built by operators who
           <br />
-          who's done it before
+          ship revenue systems
         </h2>
         <div className="flex flex-wrap items-center gap-6 mb-16">
-          {companyLogos.map((logo, i) => (
-            <img key={i} src={logo} alt="Company" className="h-5 object-contain opacity-50" />
+          {companyStripLogos.map((row) => (
+            <img
+              key={row.alt}
+              src={row.icon}
+              alt={row.alt}
+              referrerPolicy="no-referrer"
+              className="h-5 object-contain opacity-50"
+            />
           ))}
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {teamMembers.map((member) => (
+          {teamMembers.map((member) => {
+            const useBaselineCrop = headshotBaseline.has(member.name);
+            return (
             <div key={member.name} className="group">
-              <div className="aspect-square rounded-2xl overflow-hidden mb-4 bg-charcoal/5">
-                <img
+              <div className="relative aspect-square w-full rounded-full overflow-hidden mb-4 bg-charcoal/5">
+                <Image
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  fill
+                  className={
+                    useBaselineCrop
+                      ? "object-cover transition-transform duration-300 group-hover:scale-105"
+                      : "object-cover scale-[1.12] transition-transform duration-300 group-hover:scale-[1.2]"
+                  }
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
               <h3 className="text-xl font-medium">{member.name}</h3>
@@ -100,7 +103,8 @@ export default function Team() {
                 <p className="text-sm text-charcoal/50 mt-3">Prev. @ {member.prev}.</p>
               )}
             </div>
-          ))}
+          );
+          })}
         </div>
       </div>
     </section>

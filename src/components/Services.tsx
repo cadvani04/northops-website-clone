@@ -1,38 +1,44 @@
 "use client";
 const services = [
   {
-    title: "AI features",
-    description: "We've designed 20+ AI x B2B products to date and understand common UX patterns.",
+    title: "Short-Form Growth Systems",
+    description:
+      "We create TikTok and Instagram content that drives local awareness, foot traffic, and inbound demand.",
     dark: false,
     lime: true,
   },
   {
-    title: "UX design",
-    description: "We start with UX. We research competitor products in the wireframe process.",
+    title: "AI Automations",
+    description:
+      "We automate follow-ups, scheduling, reminders, onboarding, reporting, and repetitive admin work.",
     dark: false,
     lime: false,
   },
   {
-    title: "UI design",
-    description: "We deliver polished, dev-ready UI that meets WCAG accessibility standards.",
+    title: "CRM + Lead Systems",
+    description:
+      "We build CRM pipelines that capture, track, and convert leads so no customer slips through the cracks.",
     dark: false,
     lime: false,
   },
   {
-    title: "User research & testing",
-    description: "We help test flows with users by drafting scripts or reviewing user interviews.",
+    title: "Internal Operations Software",
+    description:
+      "Custom dashboards for job tracking, inventory, scheduling, purchasing, delivery workflows, and team coordination.",
     dark: true,
     lime: false,
   },
   {
-    title: "Design systems",
-    description: "We create, scale, and maintain design systems that enable fast, consistent product work.",
+    title: "AI Agents + Chatbots",
+    description:
+      "AI assistants that answer questions, qualify leads, route requests, and reduce manual support.",
     dark: true,
     lime: false,
   },
   {
-    title: "Prototyping",
-    description: "From Figma to code-based tools, we build interactive prototypes.",
+    title: "Content-to-Customer Funnels",
+    description:
+      "We connect content, landing pages, forms, SMS/email follow-up, and CRM pipelines into one system.",
     dark: false,
     lime: false,
   },

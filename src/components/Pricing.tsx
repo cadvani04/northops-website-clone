@@ -3,25 +3,30 @@ import { useState } from "react";
 import { Sparkles } from "lucide-react";
 const deliverables = [
   {
-    title: "Rituals",
-    description: "We embed into your product team's rituals. Anything from standup, design workshops, to test parties.",
+    title: "Short-Form Growth Systems",
+    description:
+      "We create TikTok and Instagram content that drives local awareness, foot traffic, and inbound demand.",
   },
   {
-    title: "Wireframes",
-    description: "This is a huge focus for us. We triangulate information from your brief, any user docs you have & competitor analyses.",
-    tags: ["User interviews", "Competitor analysis", "Brainstorm"],
+    title: "AI Automations",
+    description:
+      "We automate follow-ups, scheduling, reminders, onboarding, reporting, and repetitive admin work.",
+    tags: ["Follow-ups", "Scheduling", "Reporting"],
   },
   {
-    title: "Design systems",
-    description: "We create and manage a scalable design system, making it easy for your engineering team to ship on brand.",
+    title: "CRM + Lead Systems",
+    description:
+      "We build CRM pipelines that capture, track, and convert leads so no customer slips through the cracks.",
   },
   {
-    title: "High-fidelity",
-    description: "We bring designs to life from wireframes. This involves using consistent design out end-to-end annotated flows.",
+    title: "Internal Operations Software",
+    description:
+      "Custom dashboards for job tracking, inventory, scheduling, purchasing, delivery workflows, and team coordination.",
   },
   {
-    title: "Prototypes",
-    description: "We bring designs to life from lo-fi wireframes with consistent design system components.",
+    title: "AI Agents + Chatbots",
+    description:
+      "AI assistants that answer questions, qualify leads, route requests, and reduce manual support.",
   },
 ];
 export default function Pricing() {
@@ -33,9 +38,9 @@ export default function Pricing() {
           Pricing
         </span>
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight mb-8">
-          No guesswork on pricing,
+          Retainers from $5K/mo,
           <br />
-          we charge $18K/mo.
+          deployments from $10K+.
         </h2>
         <a
           href="#contact"
@@ -44,7 +49,7 @@ export default function Pricing() {
           <span className="w-8 h-8 bg-lime-dark/20 rounded-full flex items-center justify-center">
             <Sparkles className="w-4 h-4" />
           </span>
-          Enquire
+          Book a Strategy Call
         </a>
         <div className="border-t border-charcoal/10 pt-12">
           <div className="flex gap-8 mb-12">
@@ -54,7 +59,7 @@ export default function Pricing() {
                 activeTab === "scaleups" ? "text-charcoal" : "text-charcoal/30"
               }`}
             >
-              Scale-ups
+              Scale-ups & multi-location operators
             </button>
             <button
               onClick={() => setActiveTab("startups")}
@@ -62,13 +67,13 @@ export default function Pricing() {
                 activeTab === "startups" ? "text-charcoal" : "text-charcoal/30"
               }`}
             >
-              Startups
+              Owner-led growth teams
             </button>
           </div>
           <p className="text-charcoal/70 mb-8 max-w-xl">
             {activeTab === "scaleups"
-              ? "You've raised $50m+. You need a senior product designer in your triad to accelerate your roadmap."
-              : "Early stage startup looking for design support to ship your MVP or next big feature."}
+              ? "You already have demand and staff—NorthOps installs CRMs, automations, and internal dashboards so leads convert and ops stay predictable."
+              : "You’re building revenue with lean headcount—we connect short-form demand, CRM, and workflows so manual follow-up doesn’t cap growth."}
           </p>
           <div className="flex items-center gap-3 mb-12">
             <span className="text-sm text-charcoal/60">You'll work with</span>
@@ -76,7 +81,7 @@ export default function Pricing() {
               <img src="https://ext.same-assets.com/2268013425/4187469268.png" alt="Team" className="w-8 h-8 rounded-full border-2 border-cream" />
               <img src="https://ext.same-assets.com/2268013425/1886514585.png" alt="Team" className="w-8 h-8 rounded-full border-2 border-cream" />
             </div>
-            <span className="text-sm bg-charcoal/5 px-3 py-1 rounded-full">Design</span>
+            <span className="text-sm bg-charcoal/5 px-3 py-1 rounded-full">Systems</span>
           </div>
           <div className="space-y-0">
             {deliverables.map((item) => (

@@ -10,7 +10,9 @@ export default function Contact() {
           Contact
         </span>
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium mb-16">
-          Let's collaborate
+          Ready to replace manual work with systems that actually scale? NorthOps
+          turns content, leads, operations, and automation into one connected
+          growth engine.
         </h2>
         <div className="text-left space-y-8">
           <div className="flex flex-wrap items-center gap-2 text-lg md:text-xl">
@@ -28,9 +30,9 @@ export default function Contact() {
             />
           </div>
           <div className="flex flex-wrap items-center gap-2 text-lg md:text-xl">
-            <span>I want to chat about designs for my</span>
+            <span>I want to chat about</span>
             <div className="flex gap-2">
-              {["Web app", "Mobile app", "Website"].map((type) => (
+              {["Growth systems", "Automations", "Internal tools"].map((type) => (
                 <button
                   key={type}
                   onClick={() => setProjectType(type)}
@@ -58,7 +60,7 @@ export default function Contact() {
               <span className="w-8 h-8 bg-lime-dark/20 rounded-full flex items-center justify-center">
                 <Sparkles className="w-4 h-4" />
               </span>
-              Submit
+              Book a Strategy Call
             </button>
           </div>
         </div>

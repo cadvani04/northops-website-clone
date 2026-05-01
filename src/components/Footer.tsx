@@ -18,9 +18,9 @@ export default function Footer() {
         </div>
         <div className="flex items-center gap-2">
           <h2 className="text-6xl md:text-8xl lg:text-[10rem] font-medium tracking-tight">
-            mapo studi
+            northop
           </h2>
-          <span className="text-6xl md:text-8xl lg:text-[10rem]">o</span>
+          <span className="text-6xl md:text-8xl lg:text-[10rem]">s</span>
           <Sparkles className="w-8 h-8 md:w-12 md:h-12 text-lime ml-1" />
         </div>
       </div>
