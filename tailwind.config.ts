@@ -23,6 +23,7 @@ const config: Config = {
           dark: "#F0F0E0",
         },
       },
+      /** Geist Sans via next/font (see root layout)—same neo-grotesque role as Inter / comparable marketing stacks */
       fontFamily: {
         sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
       },

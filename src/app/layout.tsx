@@ -3,13 +3,16 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ClientBody from "./ClientBody";
 import Script from "next/script";
+/** Primary UI typography: Geist Sans (neo-grotesque; matches crisp product/marketing refs like Inter / General Sans–style stacks). Self-hosted via next/font—no runtime Google Fonts requests. */
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 export const metadata: Metadata = {
   title: "NorthOps — AI systems, content, and operations for local businesses",
@@ -40,7 +43,7 @@ export default function RootLayout({
           src="//unpkg.com/same-runtime/dist/index.global.js"
         />
       </head>
-      <body suppressHydrationWarning className="antialiased">
+      <body suppressHydrationWarning className="antialiased font-sans">
         <ClientBody>{children}</ClientBody>
       </body>
     </html>

@@ -33,7 +33,7 @@ export default function Hero() {
         aria-hidden
       />
       <div className="relative z-10 max-w-[1200px] mx-auto w-full">
-        <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-semibold leading-[1.05] tracking-[-0.04em] mb-8 text-balance">
+        <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-bold leading-[1.05] tracking-[-0.04em] mb-8 text-balance">
           AI Systems + Content{" "}
           <span className="text-charcoal/35 font-normal mx-1" aria-hidden>
             •
