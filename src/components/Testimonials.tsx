@@ -120,7 +120,7 @@ export default function Testimonials() {
               >
                 <div className="flex items-center gap-2 mb-6">
                   <span className="flex items-center gap-1 text-xs bg-charcoal/5 px-2 py-1 rounded-full">
-                    <span className="w-1.5 h-1.5 bg-lime rounded-full" />
+                    <span className="w-1.5 h-1.5 bg-brand rounded-full" />
                     {testimonial.months} MONTHS
                   </span>
                   {testimonial.active && (

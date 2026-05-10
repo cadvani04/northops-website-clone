@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 :root {
-  --lime: #D4FF00;
-  --lime-light: #E8FF66;
+  --brand: #22d3ee;
+  --brand-light: #67e8f9;
   --charcoal: #1A1A1A;
   --cream: #FAFAF5;
-  --cream-gradient: linear-gradient(180deg, #FAFAF5 0%, #F5F5E8 100%);
+  --cream-gradient: linear-gradient(180deg, #FAFAF5 0%, #F0F7FA 100%);
 }
 @layer base {
   * {
@@ -26,10 +26,10 @@
     text-wrap: balance;
   }
   .gradient-bg {
-    background: linear-gradient(180deg, #FAFAF5 0%, #F0F0E0 100%);
+    background: linear-gradient(180deg, #FAFAF5 0%, #E8F4FA 100%);
   }
-  .lime-gradient {
-    background: linear-gradient(135deg, #D4FF00 0%, #B8E600 100%);
+  .brand-gradient {
+    background: linear-gradient(135deg, #22d3ee 0%, #0891b2 100%);
   }
 }
 /* Custom scrollbar */
@@ -83,4 +83,62 @@
     black 94%,
     transparent
   );
+}
+
+/* Initial load: logo + overlay */
+@keyframes splash-logo-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.88) translateY(8px);
+  }
+  55% {
+    opacity: 1;
+    transform: scale(1.02) translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes splash-logo-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.03);
+    filter: brightness(1.06);
+  }
+}
+
+.splash-screen {
+  pointer-events: auto;
+  transition: opacity 0.55s ease-out, visibility 0.55s ease-out;
+}
+
+.splash-screen--out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.splash-logo-wrap {
+  animation: splash-logo-in 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+    splash-logo-pulse 2s ease-in-out 0.75s infinite;
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .splash-logo-wrap {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+
+  .splash-screen {
+    transition: opacity 0.15s ease-out, visibility 0.15s ease-out;
+  }
 }

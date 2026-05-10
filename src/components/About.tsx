@@ -45,9 +45,9 @@ export default function About() {
         </div>
         <a
           href="#contact"
-          className="inline-flex items-center gap-3 bg-lime hover:bg-lime-light transition-colors px-5 py-3 rounded-full text-charcoal font-medium"
+          className="inline-flex items-center gap-3 bg-brand hover:bg-brand-light transition-colors px-5 py-3 rounded-full text-charcoal font-medium"
         >
-          <span className="w-8 h-8 bg-lime-dark/20 rounded-full flex items-center justify-center">
+          <span className="w-8 h-8 bg-brand-dark/20 rounded-full flex items-center justify-center">
             <Sparkles className="w-4 h-4" />
           </span>
           Book a Strategy Call

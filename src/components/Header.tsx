@@ -12,8 +12,8 @@ export default function Header() {
           <img
             src="/northops-logo.png"
             alt="NorthOps"
-            width={148}
-            height={48}
+            width={707}
+            height={353}
             className="h-9 md:h-10 w-auto object-contain rounded-md"
             decoding="async"
           />

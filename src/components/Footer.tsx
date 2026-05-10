@@ -21,7 +21,7 @@ export default function Footer() {
             northop
           </h2>
           <span className="text-6xl md:text-8xl lg:text-[10rem]">s</span>
-          <Sparkles className="w-8 h-8 md:w-12 md:h-12 text-lime ml-1" />
+          <Sparkles className="w-8 h-8 md:w-12 md:h-12 text-brand ml-1" />
         </div>
       </div>
     </footer>

@@ -9,10 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        lime: {
-          DEFAULT: "#D4FF00",
-          light: "#E8FF66",
-          dark: "#B8E600",
+        brand: {
+          DEFAULT: "#22D3EE",
+          light: "#67E8F9",
+          dark: "#0891B2",
         },
         charcoal: {
           DEFAULT: "#1A1A1A",

@@ -1,11 +1,11 @@
 "use client";
 import { useState } from "react";
-import { Sparkles } from "lucide-react";
+import CalendlyEmbed from "@/components/CalendlyEmbed";
 export default function Contact() {
   const [projectType, setProjectType] = useState<string | null>(null);
   return (
     <section id="contact" className="py-24 px-6 gradient-bg rounded-t-3xl">
-      <div className="max-w-[800px] mx-auto text-center">
+      <div className="max-w-4xl mx-auto text-center">
         <span className="text-xs font-medium tracking-widest text-charcoal/50 uppercase mb-6 block">
           Contact
         </span>
@@ -55,13 +55,11 @@ export default function Contact() {
               className="bg-transparent border-b border-charcoal/30 focus:border-charcoal outline-none px-2 py-1 min-w-[200px] placeholder:text-charcoal/30"
             />
           </div>
-          <div className="pt-8">
-            <button className="inline-flex items-center gap-3 bg-lime hover:bg-lime-light transition-colors px-6 py-4 rounded-full text-charcoal font-medium">
-              <span className="w-8 h-8 bg-lime-dark/20 rounded-full flex items-center justify-center">
-                <Sparkles className="w-4 h-4" />
-              </span>
-              Book a Strategy Call
-            </button>
+          <div className="pt-12 w-full max-w-3xl mx-auto text-left">
+            <span className="text-xs font-medium tracking-widest text-charcoal/50 uppercase mb-4 block">
+              Book a strategy call
+            </span>
+            <CalendlyEmbed />
           </div>
         </div>
       </div>

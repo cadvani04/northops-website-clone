@@ -34,6 +34,10 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} font-sans`}
     >
       <head>
+        <link
+          href="https://assets.calendly.com/assets/external/widget.css"
+          rel="stylesheet"
+        />
         <Script
           crossOrigin="anonymous"
           src="//unpkg.com/react-grab/dist/index.global.js"

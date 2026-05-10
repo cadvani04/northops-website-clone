@@ -28,7 +28,7 @@ export default function Hero() {
         className="pointer-events-none absolute -top-24 right-0 h-[55%] w-[70%] max-w-3xl rounded-full opacity-90 blur-3xl"
         style={{
           background:
-            "radial-gradient(ellipse 70% 60% at 85% 0%, rgba(200, 230, 190, 0.55) 0%, rgba(250, 250, 245, 0) 65%)",
+            "radial-gradient(ellipse 70% 60% at 85% 0%, rgba(56, 189, 248, 0.42) 0%, rgba(250, 250, 245, 0) 65%)",
         }}
         aria-hidden
       />
@@ -55,7 +55,7 @@ export default function Hero() {
             href="#contact"
             className="inline-flex items-center gap-3 bg-white border border-charcoal/15 hover:border-charcoal/25 transition-colors px-5 py-3 rounded-full text-charcoal font-medium shadow-sm"
           >
-            <span className="w-8 h-8 bg-lime rounded-md flex items-center justify-center text-charcoal">
+            <span className="w-8 h-8 bg-brand rounded-md flex items-center justify-center text-charcoal">
               <FourPointStar className="w-3.5 h-3.5" />
             </span>
             Book a Strategy Call

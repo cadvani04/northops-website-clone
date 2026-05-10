@@ -5,42 +5,42 @@ const services = [
     description:
       "We create TikTok and Instagram content that drives local awareness, foot traffic, and inbound demand.",
     dark: false,
-    lime: true,
+    featured: true,
   },
   {
     title: "AI Automations",
     description:
       "We automate follow-ups, scheduling, reminders, onboarding, reporting, and repetitive admin work.",
     dark: false,
-    lime: false,
+    featured: false,
   },
   {
     title: "CRM + Lead Systems",
     description:
       "We build CRM pipelines that capture, track, and convert leads so no customer slips through the cracks.",
     dark: false,
-    lime: false,
+    featured: false,
   },
   {
     title: "Internal Operations Software",
     description:
       "Custom dashboards for job tracking, inventory, scheduling, purchasing, delivery workflows, and team coordination.",
     dark: true,
-    lime: false,
+    featured: false,
   },
   {
     title: "AI Agents + Chatbots",
     description:
       "AI assistants that answer questions, qualify leads, route requests, and reduce manual support.",
     dark: true,
-    lime: false,
+    featured: false,
   },
   {
     title: "Content-to-Customer Funnels",
     description:
       "We connect content, landing pages, forms, SMS/email follow-up, and CRM pipelines into one system.",
     dark: false,
-    lime: false,
+    featured: false,
   },
 ];
 const GridIcon = ({ className }: { className?: string }) => (
@@ -60,8 +60,8 @@ export default function Services() {
             <div
               key={service.title}
               className={`p-6 rounded-2xl min-h-[180px] flex flex-col justify-between transition-transform hover:scale-[1.02] ${
-                service.lime
-                  ? "bg-lime text-charcoal"
+                service.featured
+                  ? "bg-brand text-charcoal"
                   : service.dark
                     ? "bg-charcoal text-white"
                     : "bg-white border border-charcoal/10 text-charcoal"
