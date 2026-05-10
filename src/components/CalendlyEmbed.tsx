@@ -2,9 +2,13 @@
 
 import Script from "next/script";
 
-const CALENDLY_URL = "https://calendly.com/advanicurran/30min";
+const CALENDLY_URL = process.env.NEXT_PUBLIC_CALENDLY_URL ?? "";
 
 export default function CalendlyEmbed() {
+  if (!CALENDLY_URL.trim()) {
+    return null;
+  }
+
   return (
     <>
       <div className="w-full rounded-2xl overflow-hidden bg-white/40 ring-1 ring-charcoal/10">

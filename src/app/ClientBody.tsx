@@ -1,5 +1,6 @@
 "use client";
 import PageLoader from "@/components/PageLoader";
+import CalendlyScheduleBridge from "@/components/CalendlyScheduleBridge";
 import { useEffect } from "react";
 
 export default function ClientBody({
@@ -13,6 +14,7 @@ export default function ClientBody({
 
   return (
     <div className="antialiased">
+      <CalendlyScheduleBridge />
       <PageLoader>{children}</PageLoader>
     </div>
   );

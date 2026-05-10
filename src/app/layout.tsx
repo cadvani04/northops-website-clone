@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ClientBody from "./ClientBody";
+import MetaPixel from "@/components/MetaPixel";
 import Script from "next/script";
 /** Primary UI typography: Geist Sans (neo-grotesque; matches crisp product/marketing refs like Inter / General Sans–style stacks). Self-hosted via next/font—no runtime Google Fonts requests. */
 const geistSans = Geist({
@@ -48,6 +49,7 @@ export default function RootLayout({
         />
       </head>
       <body suppressHydrationWarning className="antialiased font-sans">
+        <MetaPixel />
         <ClientBody>{children}</ClientBody>
       </body>
     </html>
