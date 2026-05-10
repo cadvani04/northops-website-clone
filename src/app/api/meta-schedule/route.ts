@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { DEFAULT_META_PIXEL_ID } from "@/lib/meta-pixel-default";
 
 const GRAPH_API_VERSION = "v21.0";
 
@@ -15,13 +16,26 @@ type MetaCapiPayload = {
 
 export async function POST(req: Request) {
   const accessToken = process.env.META_ACCESS_TOKEN;
-  const pixelId = process.env.META_PIXEL_ID;
+  const pixelId =
+    process.env.META_PIXEL_ID ??
+    process.env.NEXT_PUBLIC_META_PIXEL_ID ??
+    DEFAULT_META_PIXEL_ID;
 
-  if (!accessToken || !pixelId) {
+  if (!accessToken) {
     return NextResponse.json(
       {
         ok: false as const,
-        error: "Server is missing META_ACCESS_TOKEN or META_PIXEL_ID.",
+        error: "Server is missing META_ACCESS_TOKEN.",
+      },
+      { status: 500 },
+    );
+  }
+
+  if (!pixelId.trim()) {
+    return NextResponse.json(
+      {
+        ok: false as const,
+        error: "Server is missing a valid META_PIXEL_ID.",
       },
       { status: 500 },
     );

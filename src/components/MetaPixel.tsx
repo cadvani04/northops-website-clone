@@ -1,11 +1,13 @@
 "use client";
 
 import Script from "next/script";
+import { DEFAULT_META_PIXEL_ID } from "@/lib/meta-pixel-default";
 
-const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
+const META_PIXEL_ID =
+  process.env.NEXT_PUBLIC_META_PIXEL_ID ?? DEFAULT_META_PIXEL_ID;
 
 export default function MetaPixel() {
-  if (!META_PIXEL_ID) return null;
+  if (!META_PIXEL_ID.trim()) return null;
 
   return (
     <>
